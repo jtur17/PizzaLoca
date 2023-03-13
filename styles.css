@@ -1,0 +1,356 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color:aliceblue;
+    background-color:ghostwhite;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header{
+    text-align: center;
+    color: red;
+    margin:5px
+}
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    background-color: ghostwhite;
+    padding: 1em;
+    
+}
+
+nav ul li {
+    position: relative;
+    bottom:0.4em;
+    top: 0.4em;
+    list-style: none;
+    display: inline-block;
+    padding: 0.4em;
+    font-size: 1.3em;
+    margin: auto 0.5em auto;
+
+}
+
+a img.logo{
+    margin-left: 1em;
+    width: 6em;
+    height: 6em;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+nav ul li a:hover{
+    font-weight: bold;
+    color:red;
+}
+
+/* Cajas de las pizzas */
+
+article.pizzas {
+    display:flex;
+    margin: 2em;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+div.pizzas{
+    margin:2em;
+    padding: 3em;
+    overflow: hidden;
+}
+
+article.pizzas div img {
+    display: block;
+    margin:auto;
+    width: 20em;
+    height: 20em;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+
+/* animacion fotos */
+article.pizzas div img:hover {
+    transform: scale(1.2);
+}
+
+/* Titulo principal de la página menu */
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+section h1 {
+    font-size: 3em;
+}
+
+/*---------------------------------- */
+#menu ul ul {
+    display: none;
+    position:absolute;
+    top:40px;
+}
+
+#menu ul ul {
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    background:#eee;
+    padding:0;
+
+}
+   
+/* items del menu desplegable */
+   
+#menu ul ul li {
+    float:none;
+    width:150px;
+    font-size: 0.7em;
+    padding: 0.5em;
+}
+
+/* enlaces de los items del menu desplegable */
+
+#menu ul ul a {
+    line-height:120%;
+    padding:10px;
+    padding-bottom: 10px;
+}
+
+/* items del menu desplegable al pasar el ratón */
+
+#menu ul li:hover > ul {
+    display:block;
+}
+  
+/* Formulario */
+ 
+.form {
+    width: 600px;
+    height: 520px;
+    background:red;
+    padding: 30px;
+    margin:auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    color:white;
+    margin-bottom: 500px;
+}
+
+.form h4 {
+    text-align: center;
+    color:white;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.controls {
+    width: 100%;
+    background:white;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid red;
+    font-size: 18px;
+}
+
+
+
+.form p {
+    height: 40px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.form a {
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.form a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.form .botons {
+    width: 100%;
+    background:black;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin:16px,0px;
+    font-size: 16px;
+    margin-bottom: 20px;
+
+}
+
+
+/* galeria de imagenes */
+.galeria h1{
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+.image {
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+}
+
+.image img {
+    width: 10em;
+    height: 10em;
+    object-fit: cover;
+}
+
+.second .image img {
+    object-fit: scale-down;
+}
+  
+.caption {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/*Posam el estil de la taula alterna*/
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+  
+  /* Estil per a la primera fila */
+tr:first-child {
+    background-color: #ccc;
+}
+  
+  /* Estil altern per a les files */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+  
+tr:hover {
+    background-color: #ddd;
+}
+
+/* footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+  }
+  
+  footer ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  footer ul li:last-child {
+    margin-right: 0;
+  }
+  
+  footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+
+
+
+@media only screen 
+ and (device-width: 375px) 
+ and (device-height: 812px) 
+ and (orientation:portrait) {
+    /* menu de navegación superior */
+    nav {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        position: sticky;
+        top: 0px;
+        background-color: ghostwhite;
+        padding: 0.25em;
+        
+    }
+    
+    /* Cambiamos tamaño de la letras del menu */
+    nav ul li {
+        font-size: 1em;
+    
+    }
+
+    /* cambiamos el tamaño de la imagen */
+    a img.logo{
+        width: 5em;
+        height: 5em;
+    }
+
+
+    /* formulario */
+    .form {
+        width: 300px;
+        height: 500px;
+        background:red;
+        padding: 30px;
+        margin: auto;
+        margin-top: 80px;
+        border-radius: 4px;
+        color: white;
+        margin-bottom: 80px;
+    }
+    .form p {
+        height: 40px;
+        text-align: center;
+        font-size: 15px;
+        margin-bottom: 15px;
+    }     
+    
+    /* Cambiamos la orientación de de las cajas del menu */
+    article.pizzas {
+        display:flex;
+        margin: 1em;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+    }
+    
+    div.pizzas{
+        margin:1em;
+        padding: 1em;
+    }
+    }
